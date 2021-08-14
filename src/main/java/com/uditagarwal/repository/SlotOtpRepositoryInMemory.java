@@ -8,7 +8,7 @@ import java.util.Map;
 public class SlotOtpRepositoryInMemory implements ISlotOtpRepository {
 
     // Keeping it separate and not in slot object itself as it can be a separate service to handle otps.
-    // TODO: Create separate OTP model class may be when usecases increase like handling expiry of otps.
+    // TODO: Create separate OTP model class may be when use cases increase like handling expiry of otps.
     private final Map<String, String> slotIdToOtpMap;
 
     public SlotOtpRepositoryInMemory() {

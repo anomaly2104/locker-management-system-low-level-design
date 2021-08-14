@@ -2,8 +2,6 @@ package com.uditagarwal.model;
 
 import lombok.NonNull;
 
-import java.text.SimpleDateFormat;
-
 public class Size {
     private final Double width;
     private final Double height;
@@ -13,7 +11,7 @@ public class Size {
         this.height = height;
     }
 
-    public boolean canAccomodate(@NonNull final Size sizeToAccomodate) {
-        return this.width >= sizeToAccomodate.width && this.height >= sizeToAccomodate.height;
+    public boolean canAccommodate(@NonNull final Size sizeToAccommodate) {
+        return this.width >= sizeToAccommodate.width && this.height >= sizeToAccommodate.height;
     }
 }

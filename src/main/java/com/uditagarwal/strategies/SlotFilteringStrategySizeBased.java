@@ -13,7 +13,7 @@ public class SlotFilteringStrategySizeBased implements ISlotFilteringStrategy {
     @Override
     public List<Slot> filterSlots(@NonNull final List<Slot> slots, @NonNull final LockerItem lockerItem) {
         return slots.stream()
-                .filter(slot -> slot.getSize().canAccomodate(lockerItem.getSize()))
+                .filter(slot -> slot.getSize().canAccommodate(lockerItem.getSize()))
                 .collect(Collectors.toList());
     }
 }

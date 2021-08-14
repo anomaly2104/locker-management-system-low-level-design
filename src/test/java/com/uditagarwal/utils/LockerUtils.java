@@ -3,6 +3,7 @@ package com.uditagarwal.utils;
 import com.uditagarwal.controller.LockerController;
 import com.uditagarwal.model.Locker;
 import com.uditagarwal.model.LockerItem;
+import com.uditagarwal.model.Package;
 import com.uditagarwal.model.Size;
 
 import static com.uditagarwal.utils.RandomUtils.randomString;
@@ -19,6 +20,6 @@ public class LockerUtils {
     }
 
     public static LockerItem randomLockerItem(Size itemSize) {
-        return new LockerItem(randomString(), itemSize);
+        return new Package(randomString(), itemSize);
     }
 }

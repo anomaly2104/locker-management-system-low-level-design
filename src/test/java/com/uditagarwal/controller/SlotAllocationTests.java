@@ -5,8 +5,6 @@ import com.uditagarwal.model.Buyer;
 import com.uditagarwal.model.LockerItem;
 import com.uditagarwal.model.Size;
 import com.uditagarwal.model.Slot;
-import com.uditagarwal.utils.BuyerUtils;
-import com.uditagarwal.utils.LockerUtils;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
@@ -32,13 +30,13 @@ public class SlotAllocationTests extends BaseTest {
         final LockerItem item2 = randomLockerItem(new Size(7.5, 5.0));
 
         // Act
-        final List<Slot> allSlots = lockerController.getAvailbleSlots();
+        final List<Slot> allSlots = lockerController.getAvailableSlots();
 
         final Slot slot1 = orderController.allocateLocker(buyer1, item1);
-        List<Slot> availbleSlotsPost1 = lockerController.getAvailbleSlots();
+        List<Slot> availbleSlotsPost1 = lockerController.getAvailableSlots();
 
         final Slot slot2 = orderController.allocateLocker(buyer1, item2);
-        List<Slot> availbleSlotsPost2 = lockerController.getAvailbleSlots();
+        List<Slot> availbleSlotsPost2 = lockerController.getAvailableSlots();
 
         // Assert
 
@@ -54,13 +52,13 @@ public class SlotAllocationTests extends BaseTest {
 
         // After unallocating slot1, it should get available. Slot2 should still be occupied.
         lockerController.unallocateSlot(slot1);
-        Assertions.assertTrue(lockerController.getAvailbleSlots().contains(slot1));
-        Assertions.assertFalse(lockerController.getAvailbleSlots().contains(slot2));
+        Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot1));
+        Assertions.assertFalse(lockerController.getAvailableSlots().contains(slot2));
 
         // After unallocating slot2 also now, both should be availble now;
         lockerController.unallocateSlot(slot2);
-        Assertions.assertTrue(lockerController.getAvailbleSlots().contains(slot1));
-        Assertions.assertTrue(lockerController.getAvailbleSlots().contains(slot2));
+        Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot1));
+        Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot2));
     }
 
     @Test(expected = NoSlotAvailableException.class)

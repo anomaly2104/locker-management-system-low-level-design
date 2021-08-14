@@ -1,5 +1,5 @@
 ### Problem statement:
-Design a Locker Management system for an ecommerce store. While performing a purchase, the users can opt for their packages to get delivered at a Locker system close to their place. The delivery person will place the package in a locker. An otp will be generated and sent to the user once the package is added to the locker.
+Design a Locker management system for an ecommerce store. While performing a purchase, the users can opt for their packages to get delivered at a Locker system close to their place. The delivery person will place the package in a locker. An otp will be generated and sent to the user once the package is added to the locker.
 
 As per the user’s convenience, they can visit the locker, enter the otp and get their parcel. Further, if the users want to return the goods, they can visit the locker and place the item. Delivery guy will get an otp which can be used to unlock the locker.
 

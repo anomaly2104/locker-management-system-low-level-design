@@ -15,7 +15,6 @@ public class LockerRepositoryInMemory implements ILockerRepository {
         this.allLockers = new ArrayList<>();
     }
 
-    @NonNull
     public Locker getLocker(@NonNull final String id) {
         for (Locker locker : this.allLockers) {
             if (locker.getId().equals(id)) {

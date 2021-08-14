@@ -28,7 +28,7 @@ public class LockerController {
         return lockerService.createSlot(locker, slotSize);
     }
 
-    public List<Slot> getAvailbleSlots() {
+    public List<Slot> getAvailableSlots() {
         return lockerService.getAllAvailableSlots();
     }
 
