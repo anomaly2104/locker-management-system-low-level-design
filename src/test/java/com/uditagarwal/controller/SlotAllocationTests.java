@@ -65,4 +65,10 @@ public class SlotAllocationTests extends BaseTest {
     public void testSlotAllocationWithoutAddingSlotsThrowsException() {
         orderController.allocateLocker(randomBuyer(), randomLockerItem(new Size(10.0, 10.0)));
     }
+
+    @Test(expected = NoSlotAvailableException.class)
+    public void testSlotAllocationWithoutMatchingSlotsThrowsException() {
+        createTestLockerWithSlots(lockerController, 2, new Size(5.0, 5.0));
+        orderController.allocateLocker(randomBuyer(), randomLockerItem(new Size(10.0, 10.0)));
+    }
 }
