@@ -1,6 +1,12 @@
 package com.uditagarwal.model;
 
-public interface LockerUser {
+import lombok.Getter;
 
-    Contact getContact();
+@Getter
+public abstract class LockerUser {
+    private final Contact contact;
+
+    public LockerUser(Contact contact) {
+        this.contact = contact;
+    }
 }
