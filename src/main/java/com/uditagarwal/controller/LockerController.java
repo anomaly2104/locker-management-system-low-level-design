@@ -34,6 +34,7 @@ public class LockerController {
 
     public boolean unlockSlot(@NonNull final Slot slot, @NonNull final String otp) {
         return otpService.validateOtp(slot, otp);
+        // Post validation of otp, some physical entity will open the actual slot.
     }
 
     public void deallocateSlot(@NonNull final Slot slot) {
