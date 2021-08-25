@@ -6,7 +6,7 @@ public class Size {
     private final Double width;
     private final Double height;
 
-    public Size(Double width, Double height) {
+    public Size(@NonNull final Double width, @NonNull final Double height) {
         this.width = width;
         this.height = height;
     }

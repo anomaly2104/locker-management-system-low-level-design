@@ -33,30 +33,30 @@ public class SlotAllocationTests extends BaseTest {
         final List<Slot> allSlots = lockerController.getAvailableSlots();
 
         final Slot slot1 = orderController.allocateLocker(buyer1, item1);
-        List<Slot> availbleSlotsPost1 = lockerController.getAvailableSlots();
+        List<Slot> availableSlotsPost1 = lockerController.getAvailableSlots();
 
         final Slot slot2 = orderController.allocateLocker(buyer1, item2);
-        List<Slot> availbleSlotsPost2 = lockerController.getAvailableSlots();
+        List<Slot> availableSlotsPost2 = lockerController.getAvailableSlots();
 
         // Assert
 
         // Slot1 should be available only initially.
         Assertions.assertTrue(allSlots.contains(slot1));
-        Assertions.assertFalse(availbleSlotsPost1.contains(slot1));
-        Assertions.assertFalse(availbleSlotsPost2.contains(slot1));
+        Assertions.assertFalse(availableSlotsPost1.contains(slot1));
+        Assertions.assertFalse(availableSlotsPost2.contains(slot1));
 
-        // Slot2 should be available till item 2 is not alloted.
+        // Slot2 should be available till item 2 is not allotted.
         Assertions.assertTrue(allSlots.contains(slot2));
-        Assertions.assertTrue(availbleSlotsPost1.contains(slot2));
-        Assertions.assertFalse(availbleSlotsPost2.contains(slot2));
+        Assertions.assertTrue(availableSlotsPost1.contains(slot2));
+        Assertions.assertFalse(availableSlotsPost2.contains(slot2));
 
-        // After unallocating slot1, it should get available. Slot2 should still be occupied.
-        lockerController.unallocateSlot(slot1);
+        // After deallocating slot1, it should get available. Slot2 should still be occupied.
+        lockerController.deallocateSlot(slot1);
         Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot1));
         Assertions.assertFalse(lockerController.getAvailableSlots().contains(slot2));
 
-        // After unallocating slot2 also now, both should be availble now;
-        lockerController.unallocateSlot(slot2);
+        // After deallocating slot2 also now, both should be available now;
+        lockerController.deallocateSlot(slot2);
         Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot1));
         Assertions.assertTrue(lockerController.getAvailableSlots().contains(slot2));
     }

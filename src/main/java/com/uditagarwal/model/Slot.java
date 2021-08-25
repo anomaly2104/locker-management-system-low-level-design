@@ -31,7 +31,7 @@ public class Slot {
         this.currentLockerItem = newLockerItem;
     }
 
-    synchronized public void unallocateSlot() {
+    synchronized public void deallocateSlot() {
         this.currentLockerItem = null;
     }
 

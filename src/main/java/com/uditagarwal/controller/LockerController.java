@@ -36,7 +36,7 @@ public class LockerController {
         return otpService.validateOtp(slot, otp);
     }
 
-    public void unallocateSlot(@NonNull final Slot slot) {
-        lockerService.unallocateSlot(slot);
+    public void deallocateSlot(@NonNull final Slot slot) {
+        lockerService.deallocateSlot(slot);
     }
 }

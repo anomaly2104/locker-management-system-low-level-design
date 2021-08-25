@@ -59,7 +59,7 @@ public class LockerService {
         return slotToBeAllocated;
     }
 
-    public void unallocateSlot(@NonNull final Slot slot) {
-        slot.unallocateSlot();
+    public void deallocateSlot(@NonNull final Slot slot) {
+        slot.deallocateSlot();
     }
 }
