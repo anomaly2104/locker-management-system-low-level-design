@@ -20,11 +20,16 @@ public class LockerController {
         this.otpService = otpService;
     }
 
+    //testing
+
+    //testing 2
+
     public Locker createLocker(@NonNull final String lockerId) {
         return lockerService.createLocker(lockerId);
     }
 
     public Slot createSlot(@NonNull final Locker locker, @NonNull final Size slotSize) {
+        //12132142
         return lockerService.createSlot(locker, slotSize);
     }
 
