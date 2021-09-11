@@ -29,6 +29,7 @@ public class LockerController {
     }
 
     public Slot createSlot(@NonNull final Locker locker, @NonNull final Size slotSize) {
+        //ldjlewlfjew
         return lockerService.createSlot(locker, slotSize);
     }
 
