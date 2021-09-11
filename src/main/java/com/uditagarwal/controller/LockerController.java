@@ -29,7 +29,7 @@ public class LockerController {
     }
 
     public Slot createSlot(@NonNull final Locker locker, @NonNull final Size slotSize) {
-        //ldjlewlfjew
+        //12132142
         return lockerService.createSlot(locker, slotSize);
     }
 
