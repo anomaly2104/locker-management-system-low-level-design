@@ -20,6 +20,8 @@ public class LockerController {
         this.otpService = otpService;
     }
 
+    //testing
+
     public Locker createLocker(@NonNull final String lockerId) {
         return lockerService.createLocker(lockerId);
     }
