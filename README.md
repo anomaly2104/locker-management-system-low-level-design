@@ -3,10 +3,10 @@
 ### Problem Statement
 [Check here](problem-statement.md)
 
-## Connect with me and my offerings:
+### Connect with me and my offerings:
 https://enginebogie.com/u/anomaly2104
 
-## Video Explanation
+### Video Explanation
 https://youtu.be/O_oLtUHlrXM
 
 ### Further Improvements
